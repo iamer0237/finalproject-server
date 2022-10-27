@@ -4,9 +4,8 @@
   "description": "backend for ibc21",
   "main": "server.js",
   "scripts": {
-    "start": "node backend/server.js",
-    "server": "nodemon backend/server.js",
-    "dev": "npm run server\" "
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "author": "Ibraheem Amer",
   "license": "ISC",
