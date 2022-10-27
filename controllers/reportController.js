@@ -36,8 +36,8 @@ const setReport = asyncHandler(async (req, res) => {
       console.log(result);
       const report = await Report.create({
         name: req.body.name,
-        phone: req.body.phone,
-        email: req.body.email,
+        // phone: req.body.phone,
+        // email: req.body.email,
         title: req.body.title,
         description: req.body.description,
         category: req.body.category,

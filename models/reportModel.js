@@ -9,18 +9,18 @@ const reportSchema = mongoose.Schema(
     // },
     name: {
         type: String,
-        required: [true, "Please add your name"],
+        required: [false, "Please add your name"],
       },
       
-      phone: {
-        type: Number,
-        required: false,
-      },
+      // phone: {
+      //   type: Number,
+      //   required: false,
+      // },
       
-      email: {
-        type: String,
-        required: false,
-      },
+      // email: {
+      //   type: String,
+      //   required: false,
+      // },
 
     image: {
       type: String,
@@ -35,15 +35,15 @@ const reportSchema = mongoose.Schema(
     
     category: {
       type: String,
-      required: [true, "Please select a category"],
+      required: [false, "Please select a category"],
     },
     title: {
       type: String,
-      required: [true, "Please add a title"],
+      required: [false, "Please add a title"],
     },
     description: {
       type: String,
-      required: [true, "Please add a description"],
+      required: [false, "Please add a description"],
     },
     isPending: {
       type: Boolean,
