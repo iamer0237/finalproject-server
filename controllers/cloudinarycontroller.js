@@ -6,8 +6,13 @@ const cors = require("cors");
 const cloudinary = require("../cloudinary/cloudinary");
 
 app.use(cors());
-app.use(express.json({ limit: "50mb" }));
-app.use(express.urlencoded({ extended: true, limit: "50mb" }));
+
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
+
+// app.use(express.json({ limit: "50mb" }));
+// app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 
 app.get("/,", (req, res) => {
   res.send("Hello");
@@ -15,7 +20,7 @@ app.get("/,", (req, res) => {
 app.post("/", async (req, res) => {
   const { image } = req.body;
   const uploadedImage = await cloudinary.uploader.upload(
-    "image",
+    image,
     {
       upload_present: "unsigned_upload",
       allowed_formats: ["png", "jpg", "jpeg", "svg", "ico", "jfif", "webp"],

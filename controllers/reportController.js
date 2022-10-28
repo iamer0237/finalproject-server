@@ -23,6 +23,7 @@ const setReport = asyncHandler(async (req, res) => {
   //   res.status(400);
   //   throw new Error("Please add a text field");
   // }
+  console.log("1")
   const uploadedImage = await cloudinary.uploader.upload(
     req.body.image,
     {
