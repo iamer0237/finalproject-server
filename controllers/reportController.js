@@ -43,7 +43,7 @@ const setReport = asyncHandler(async (req, res) => {
         description: req.body.description,
         category: req.body.category,
         coordinates: req.body.coordinates,
-        image: result.url,
+        image: result.secure_url,
       });
       res.status(200).json(report);
     }
